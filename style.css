@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-action {
+    background-color: #0DAA2A;
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.loider {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+}
+
+dotlottie-player {
+    width: 200%;
+}
+
+
+.sec1 {
+    display: flex;
+    height: 70vh;
+}
+
+
+
+.stud {
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.foot-stud{
+    height: 70vh;
+    position: relative;
+    
+}
+
+/*******************************************************/
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Players-container{ 
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+    height: 100%;
+    color: white;
+}
+
+.attackers{
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content:  space-around;
+    column-gap: 50px;
+    padding-top: 20px;
+}
+
+.Mid{
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        justify-content:  center;
+        column-gap: 80px !important;
+        margin-top: 30px;
+}
+
+
+.attackers img,.Mid img,.Def img,.Gk img{
+    height: 110px;
+}
+
+.Def{
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    justify-content:  space-between;
+    column-gap: 50px;
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
+.Def div:nth-child(2),.Def div:nth-child(3){
+    transform: translateY(60px);
+}
+
+.Mid div:nth-child(2){
+    transform: translateY(40px);
+}
+
+ #lw{
+    transform: translateY(30px);
+}
+
+.Gk{
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 100px;
+    justify-content:  center;
+    column-gap: 50px;
+    margin-top: 50px;
+}
+
+.plimg{
+    width: 60px;
+    height: 50px !important;
+}
+
+.pl-img{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.pl-name{
+    color: rgb(80, 56, 56);
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    font-weight: bolder;
+    font-size: 50%;
+
+}
+.pl-power{
+    color: rgb(80, 56, 56);
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    font-weight: bolder;
+    font-size: 7px;
+}
+
+.stats{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.flags{
+    position: absolute;
+    width: 100%;
+    top: 78px;
+    left: 33px;
+}
+.flags img{
+    width: 15px;
+    height: 10px;
+}
+
+.pl-pos{
+    color: rgb(80, 56, 56);
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-weight: bolder;
+    font-size: 7px;
+}
+
+/*/*********************************/
+.content{   
+    width: 100%;
+    height: 87vh !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.addbtn{
+    background-color: #0DAA2A;
+    color: white;
+    width: 310px;
+    height: 40px;
+    font-size: larger;
+    font-weight: bolder;
+    border: 1px black solid;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.pl-container{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    column-gap: 50px;
+    top: 10px;
+    width: 300px;
+}
+
+.pl-container .pl-name{
+    width: 100%;
+}
+.card-img{
+    height: 110px;
+    margin-left: 50px;
+}
+
+.crd{
+    justify-content: start;
+}
+
+.cont{
+    height: 100%;
+    background-color: #152e1a;
+    border-radius: 8px;
+    overflow: scroll;
+}
+
+.cont::-webkit-scrollbar{
+    display: none;
+}
+
