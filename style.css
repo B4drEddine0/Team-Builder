@@ -91,6 +91,15 @@ dotlottie-player {
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
+}
+
+.data{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
 }
 
 .Players-container{ 
@@ -134,7 +143,7 @@ dotlottie-player {
     padding: 0 40px;
 }
 
-.Def div:nth-child(2),.Def div:nth-child(3){
+#cb{
     transform: translateY(60px);
 }
 
@@ -167,9 +176,8 @@ dotlottie-player {
 }
 .pl-name{
     color: rgb(80, 56, 56);
-    position: absolute;
-    top: 70px;
-    left: 25px;
+    margin-top: 70px;
+    text-align: center;
     font-weight: bolder;
     font-size: 50%;
 
@@ -239,6 +247,7 @@ dotlottie-player {
 
 .pl-container .pl-name{
     width: 100%;
+    margin-left: 25px;
 }
 .card-img{
     height: 110px;
@@ -254,9 +263,178 @@ dotlottie-player {
     background-color: #152e1a;
     border-radius: 8px;
     overflow: scroll;
+    position: relative;
 }
 
 .cont::-webkit-scrollbar{
     display: none;
 }
 
+
+/*/*****************************************/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.stats-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats-group input {
+    width: 80px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+
+output {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0DAA2A;
+}
+
+.btn-sub {
+    background-color: #0DAA2A;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-sub:hover {
+    background-color: #098a22;
+}
+
+
+
+/* @media(max-width:951px){
+    .sec1{
+        flex-direction: column;
+    }
+    .content{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .cont{
+        width:45%;
+        height: 50%;
+    }
+    .Players-container{
+        width: 100%;
+    }
+
+    .pl-container{
+        grid-template-columns: 50px 50px 50px 50px;
+        
+    }
+} */
+
+
+.det {
+    border: 3px solid #098a22;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0;
+  }
+  
+  .det-flags img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .close-det{
+    float: right;
+    cursor: pointer;
+  }
+
+  .position{
+    cursor:move;
+  }
+
+  .deletebtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+
+
+  @keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .shake{
+    animation: tilt-shaking 0.5s infinite;
+  }
+
+  .occupie{
+    display: none;
+  }
