@@ -27,6 +27,9 @@ const form1 = document.getElementById('form1');
 const form2 = document.getElementById('form2');
 const switchBtn = document.getElementById('switchbtn');
 const resetBtn = document.getElementById('resetbtn');
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const content = document.querySelector('.content');
+const closeOverlay = document.createElement('div');
 
 const plList = JSON.parse(localStorage.getItem("list")) || [];
 
@@ -446,17 +449,6 @@ let clicked = true;
 
 });
 
-
-
-
-
-
-
-
-// Add this to your existing JavaScript
-const hamburgerBtn = document.querySelector('.hamburger-btn');
-const content = document.querySelector('.content');
-const closeOverlay = document.createElement('div');
 
 closeOverlay.style.cssText = `
     position: fixed;
