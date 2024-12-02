@@ -119,6 +119,15 @@ dotlottie-player {
     padding-top: 20px;
 }
 
+.attackerss{
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    justify-content:  center;
+    column-gap: 70px;
+    padding-top: 20px;
+}
+
 .Mid{
         width: 100% !important;
         display: grid;
@@ -128,8 +137,17 @@ dotlottie-player {
         margin-top: 30px;
 }
 
+.Mids{
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    justify-content:  center;
+    column-gap: 80px !important;
+    margin-top: 30px;
+}
 
-.attackers img,.Mid img,.Def img,.Gk img{
+
+.attackers img,.Mid img,.Def img,.Gk img,.attackerss img,.Mids img{
     height: 110px;
 }
 
@@ -267,6 +285,12 @@ dotlottie-player {
 }
 
 .cont::-webkit-scrollbar{
+    display: none;
+}
+#Modal{
+    overflow: scroll;
+}
+#Modal::-webkit-scrollbar{
     display: none;
 }
 
@@ -415,7 +439,7 @@ output {
     cursor:move;
   }
 
-  .deletebtn{
+  .deletebtn,.editebtn{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -423,7 +447,7 @@ output {
 
 
 
-  @keyframes tilt-shaking {
+  @keyframes shaking {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(5deg); }
     50% { transform: rotate(0eg); }
@@ -432,9 +456,30 @@ output {
   }
 
   .shake{
-    animation: tilt-shaking 0.5s infinite;
+    animation: shaking 0.5s infinite;
   }
 
   .occupie{
     display: none;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

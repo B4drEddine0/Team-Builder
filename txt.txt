@@ -23,10 +23,6 @@ const data = document.querySelectorAll('.data');
 const deleteBtn = document.querySelector('.deletebtn');
 const noPl = document.querySelector('.noPl');
 const goBack = document.querySelector('.goback');
-const form1 = document.getElementById('form1');
-const form2 = document.getElementById('form2');
-const switchBtn = document.getElementById('switchbtn');
-const resetBtn = document.getElementById('resetbtn');
 
 const plList = JSON.parse(localStorage.getItem("list")) || [];
 
@@ -100,8 +96,6 @@ let clicked = true;
                             noPl.classList.add("hidden");
                             changement.forEach(p=>{
                                 p.classList.remove('occupie');
-                                p.classList.remove('shake');
-                                p.onclick = null;
                             })
                         })
                     }
@@ -114,7 +108,7 @@ let clicked = true;
 
 
     openBtn.addEventListener("click", () => modal.classList.remove("hidden"));
-    closeBtn.addEventListener("click", () =>{modal.classList.add("hidden"); plContainer.classList.remove('hidden')});
+    closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
 
     position.addEventListener("change", () => {
         const selectedPos = position.value;
@@ -187,7 +181,7 @@ let clicked = true;
         const plList = JSON.parse(localStorage.getItem("list")) || [];
 
         if (btnSub.textContent === "Update Player") {
-            const index = plList.findIndex(p => p.plname === playerData.plname);  
+            const index = plList.findIndex(p => p.plname === playerData.plname);
             if (index !== -1) {
                 plList[index] = playerData;
                 localStorage.setItem("list", JSON.stringify(plList));
@@ -234,8 +228,11 @@ let clicked = true;
                 alert("Player with this name already exists.");
                 return;
             }
+        }
+
         
 
+        
         plList.push(playerData);
         
         const newCardHTML = `
@@ -279,7 +276,7 @@ let clicked = true;
         gkStats.classList.add('hidden');
         allStats.classList.add("hidden");
 
-        Form.reset();}
+        Form.reset();
     });
 
 
@@ -289,13 +286,9 @@ let clicked = true;
     plContainer.addEventListener("click", (e) => {
         if (clicked){
         const card = e.target.closest(".card"); 
-        const cardindex = card.getAttribute("data-name");
+
         deleteBtn.addEventListener('click',()=>{
             card.remove();
-            
-            const plList = JSON.parse(localStorage.getItem('list') || []);
-            const updatedList = plList.filter(p=> p.plname !== cardindex);
-            localStorage.setItem("list",JSON.stringify(updatedList));
             detailsDiv.classList.add("hidden");
             plContainer.classList.remove("hidden");
         })
@@ -415,7 +408,6 @@ let clicked = true;
                  modal.classList.add("hidden");
                  plContainer.classList.remove("hidden");
                  Form.reset();
-                 window.location.reload();
                 };
             });
         }
@@ -427,21 +419,6 @@ let clicked = true;
             detailsDiv.classList.add("hidden");
             plContainer.classList.remove("hidden");
         } );
-
-        switchBtn.addEventListener('click',()=>{
-            if(form2.classList.contains('hidden')){
-                form1.classList.add('hidden');
-                form2.classList.remove('hidden');
-            }else{
-                form1.classList.remove('hidden');
-                form2.classList.add('hidden');
-            }
-            
-        })
-
-        resetBtn.addEventListener('click',()=>{
-            window.location.reload();
-        })
 
 
 });
