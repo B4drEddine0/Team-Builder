@@ -453,3 +453,34 @@ let clicked = true;
 
 
 
+// Add this to your existing JavaScript
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const content = document.querySelector('.content');
+const closeOverlay = document.createElement('div');
+
+closeOverlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 98;
+`;
+
+document.body.appendChild(closeOverlay);
+
+hamburgerBtn.addEventListener('click', () => {
+    content.classList.add('active');
+    closeOverlay.style.display = 'block';
+    hamburgerBtn.classList.add('hidden');
+});
+
+
+
+closeOverlay.addEventListener('click', () => {
+    content.classList.remove('active');
+    closeOverlay.style.display = 'none';
+    hamburgerBtn.classList.remove('hidden');
+});
