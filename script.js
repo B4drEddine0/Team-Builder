@@ -82,7 +82,8 @@ let clicked = true;
                     }
                     el.innerHTML = statsDiv.outerHTML;
                     p.style.display ='none';
-
+                    plnames();
+                    
                     hiddenCardsMap.set(el, p);
                     changement.forEach((c)=>{
                     c.classList.remove('shake');
@@ -211,6 +212,11 @@ let clicked = true;
             if (!/^[A-Za-z\s]{2,11}$/.test(playerData.plname)) {
                 isValid = false;
                 alert("Player name must be 2-11 characters long and contain only letters and spaces.");
+            }
+
+            if(!playerData.plname.trim()){
+                isValid = false;
+                alert('name shouldnt be empty');
             }
 
             if (!photo.value.trim()) {
@@ -470,9 +476,43 @@ hamburgerBtn.addEventListener('click', () => {
 });
 
 
-
 closeOverlay.addEventListener('click', () => {
     content.classList.remove('active');
     closeOverlay.style.display = 'none';
     hamburgerBtn.classList.remove('hidden');
 });
+
+
+
+
+
+
+
+
+
+
+function plnames(){
+    const container2 = document.querySelector('.foot-stud');
+let total = 0 ;
+    let i =0;
+Array.from(container2.children).forEach(card=>{
+    
+    let power = card.querySelectorAll('.pl-power');
+    power.forEach(p=>{
+       total += Number(p.textContent);
+       i++;
+        
+    })
+})
+
+let res = total/i;
+console.log(res);
+
+
+}
+
+
+
+
+
+

@@ -156,7 +156,6 @@ dotlottie-player {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
     justify-content:  space-between;
-    column-gap: 50px;
     margin-top: 60px;
     padding: 0 40px;
 }
@@ -315,7 +314,6 @@ dotlottie-player {
     padding: 30px;
     border-radius: 10px;
     width: 450px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -475,10 +473,12 @@ output {
         z-index: 99;
         padding: 20px;
         overflow-y: auto;
-        color: #f8f8f8;
+        
     }
-
-    .content h2{
+    .det h2{
+        color: #098a22 !important;
+    }
+    .content h2,.content h4{
         color: white;
     }
     
@@ -496,6 +496,13 @@ output {
     .hamburger-btn {
         display: block;
     }
+    .stud{
+        width: 100%;
+        height: 100%;
+    }
+    .infield{
+        scale: 0.7;
+    }
 
 }
 
@@ -508,6 +515,9 @@ output {
     .hamburger-btn {
         top: 10px;
         right: 10px;
+    }
+    .infield{
+        scale: 0.7;
     }
 }
 
