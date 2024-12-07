@@ -156,7 +156,6 @@ dotlottie-player {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
     justify-content:  space-between;
-    column-gap: 50px;
     margin-top: 60px;
     padding: 0 40px;
 }
@@ -497,6 +496,20 @@ output {
         display: block;
     }
 
+    .stud{
+        width: 100%;
+        height: 100%;
+    }
+
+    .infield{
+        scale: 0.7;
+    }
+
+    .Mids{
+        column-gap: 5px !important;
+    }
+    
+
 }
 
 @media (max-width: 480px) {
@@ -509,11 +522,15 @@ output {
         top: 10px;
         right: 10px;
     }
+
+    .infield{
+        scale: 0.7;
+    }
 }
 
 
 
-/*///////*/
+
 
 
 
